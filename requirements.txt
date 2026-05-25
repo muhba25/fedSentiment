@@ -1,0 +1,28 @@
+# FedSentiment — Python Dependencies
+# Install: pip install -r requirements.txt
+
+# Flower FL Framework
+flwr[simulation]>=1.8.0
+
+# PyTorch (CPU version, gunakan cu121 untuk GPU)
+torch>=2.0.0
+torchvision>=0.15.0
+
+# NLP & Dataset
+datasets>=2.18.0          # HuggingFace datasets (IMDB)
+transformers>=4.38.0      # Tokenizer
+nltk>=3.8.1
+
+# Numerics & Utilities
+numpy>=1.24.0
+scikit-learn>=1.3.0
+pandas>=2.0.0
+
+# Logging & Config
+pyyaml>=6.0
+omegaconf>=2.3.0
+loguru>=0.7.0
+
+# Visualization (opsional, untuk analisis hasil)
+matplotlib>=3.7.0
+seaborn>=0.12.0

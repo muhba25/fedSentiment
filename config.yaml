@@ -1,0 +1,45 @@
+# config.yaml — Konfigurasi Global FedSentiment
+
+# ===================== SERVER =====================
+server:
+  host: "0.0.0.0"           # Server listen di semua interface
+  port: 9091
+  num_rounds: 10            # Jumlah FL round
+  min_fit_clients: 3        # Min klien untuk training per round
+  min_evaluate_clients: 3   # Min klien untuk evaluasi
+  min_available_clients: 3  # Min klien yang harus tersedia
+
+# ===================== KLIEN =====================
+client:
+  server_address: "192.168.1.10:9091"   # Ganti sesuai IP server
+  node_id: 0                             # Diisi saat runtime (0, 1, atau 2)
+
+# ===================== MODEL =====================
+model:
+  vocab_size: 20000         # Ukuran vocab
+  embed_dim: 128            # Dimensi embedding
+  num_filters: 100          # Jumlah filter CNN
+  kernel_sizes: [3, 4, 5]  # Ukuran kernel multi-channel
+  dropout: 0.5
+  num_classes: 2            # Positif / Negatif
+
+# ===================== TRAINING =====================
+training:
+  local_epochs: 5           # Epoch per FL round di tiap klien
+  batch_size: 64
+  learning_rate: 0.001
+  optimizer: "adam"
+  max_seq_len: 256          # Panjang maksimum token
+
+# ===================== DATASET =====================
+dataset:
+  name: "imdb"              # HuggingFace dataset name
+  num_clients: 3            # Jumlah partisi data
+  test_split: 0.2           # 20% untuk test lokal
+  seed: 42
+
+# ===================== LOGGING =====================
+logging:
+  level: "INFO"
+  save_dir: "./results"
+  log_file: "fedsentiment.log"

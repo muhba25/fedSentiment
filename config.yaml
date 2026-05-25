@@ -19,7 +19,7 @@ model:
   vocab_size: 20000         # Ukuran vocab
   embed_dim: 128            # Dimensi embedding
   num_filters: 100          # Jumlah filter CNN
-  kernel_sizes: [3, 4, 5]  # Ukuran kernel multi-channel
+  kernel_sizes: [3, 4, 5]   # Ukuran kernel multi-channel
   dropout: 0.5
   num_classes: 2            # Positif / Negatif
 

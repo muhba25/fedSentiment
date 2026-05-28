@@ -8,6 +8,9 @@ FedSentiment adalah implementasi **Federated Learning** untuk klasifikasi sentim
 
 ---
 
+## Fedsentiment Topology
+![Architectur Topology Fedsentiment](https://github.com/muhba25/fedSentiment/blob/master/src/img/federated_learning_architecture.svg)
+
 ## Struktur Project
 
 ```
@@ -45,6 +48,9 @@ fedsentiment/
 > Catatan: Jika hanya tersedia 3 node, jalankan server + 1 client di node fl-server.
 
 ---
+
+## Fedsentimen Flowchart
+![Flowchart Fedsentiment](https://github.com/muhba25/fedSentiment/blob/master/src/img/fl_round_flowchart.svg)
 
 ## Spesifikasi Teknis
 
